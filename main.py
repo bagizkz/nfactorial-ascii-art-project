@@ -56,7 +56,7 @@ def main():
     # Настройка аргументов командной строки
     parser = argparse.ArgumentParser(description="Рендеринг ASCII-арт текста.")
     parser.add_argument("input_text", type=str, help="Текст для рендеринга.")
-    parser.add_argument("banner", type=str, help="BANNER: standard, shadow, thinkertoy")
+    parser.add_argument("banner", type=str, nargs="?", default="standard", help="BANNER: standard, shadow, thinkertoy")
     parser.add_argument("-o", "--output", type=str, help="Файл для сохранения", default=None)
     args = parser.parse_args()
 
